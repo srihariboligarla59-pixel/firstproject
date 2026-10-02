@@ -1,7 +1,7 @@
 name: firstexample
 on : push
 jobs:
-  buid_job:
+  build_job:
      run-on : ubuntu-latest
      - name : "install the COWSAY"
       run : sudo apt install cowsay -y
