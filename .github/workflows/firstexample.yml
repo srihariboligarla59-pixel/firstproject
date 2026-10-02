@@ -1,14 +1,19 @@
 name: firstexample
 on : push
 jobs:
-    my-job:
-        runs-on: ubuntu-latest
-        steps:
-         - name : checkout the actions
-           uses : actions/checkout@v4
-         - name : excuting the shell scripting
-           run : |
-            chmod +x .github/workflows/script.sh
-            .github/workflows/script.sh
+  buid-job:
+    run-on : ubuntu-latest
+     - name : "install the COWSAY"
+      run : sudo apt install cowsay -y
+     - name : print the cowsay
+      run : cowsay -f srihari "hello srihari!!">>srihari.txt
+  test-job: 
+    run-on : ubuntu-latest
+     - name : test the srihari file
+       run : grep -i hello srihari.txt
+  deploy-job:
+    run-on : ubuntu-latest 
+     - name : deploy the file 
+       run: echo " deployed"  
          
         
