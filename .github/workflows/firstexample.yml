@@ -7,13 +7,10 @@ jobs:
          - name : checkout the actions
            uses : actions/checkout@v4
          
-         - name : my first yml for the pull trigger
-           run : echo " hey srihari u made it buddy"
-        
-         - name : list the file
-           run : ls
-         - name : read the files
-           run: echo "there is no file only readme"
-         - name : read the md file
-           run: cat README.md
+         - name : install the cowsay
+           run : sudo apt install cowsay -y
+         - name : run cowsay
+           run : cowsay "hellow SriHari_Boligarla"
+         - name : get the list of iteams
+           run : ls -ltr
         
