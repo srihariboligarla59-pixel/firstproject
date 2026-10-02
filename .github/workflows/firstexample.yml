@@ -1,0 +1,7 @@
+name: firstexample
+on : pull
+jobs:
+    my-job:
+        steps:
+        - name: " my first yml for the pull trigger"
+           run: echo " hey srihari u made it buddy"
