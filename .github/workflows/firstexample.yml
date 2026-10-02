@@ -3,7 +3,7 @@ name: firstexample
 on: push
 
 jobs:
-  build_job:
+  build_job: 
     runs-on: ubuntu-latest
     steps:
       - name: "install the COWSAY"
@@ -16,12 +16,14 @@ jobs:
         run: sleep 5
 
   test_job:
+    needs : build_job
     runs-on: ubuntu-latest
     steps:
       - name: test the srihari file
         run: grep -i hello srihari.txt
 
   deploy_job:
+    needs: [build_job , test_job]
     runs-on: ubuntu-latest
     steps:
       - name: deploy the file
