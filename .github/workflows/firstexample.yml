@@ -3,12 +3,13 @@ on : push
 jobs:
 build_job:
      run-on : ubuntu-latest
+     steps:
      - name : "install the COWSAY"
       run : sudo apt install cowsay -y
      - name : print the cowsay
       run : cowsay -f srihari "hello srihari!!">>srihari.txt
      - name: sleep for 5 sec
-       run : sleep 5
+      run : sleep 5
 test_job: 
      run-on : ubuntu-latest
      - name : test the srihari file
