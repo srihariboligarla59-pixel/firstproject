@@ -6,11 +6,8 @@ jobs:
         steps:
          - name : checkout the actions
            uses : actions/checkout@v4
-         
-         - name : install the cowsay
-           run : sudo apt install cowsay -y
-         - name : run cowsay
-           run : cowsay "hellow SriHari_Boligarla"
+         - name : excuting the shell scripting
+           run : ./script.sh
          - name : get the list of iteams
            run : ls -ltr
         
