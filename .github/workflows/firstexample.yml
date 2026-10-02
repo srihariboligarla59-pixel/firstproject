@@ -1,8 +1,8 @@
 name: firstexample
-on : pull
+on : pull_request
 jobs:
     my-job:
-        run: ubuntu-latest 
+        runs-on: ubuntu-latest 
         steps:
-        - name: " my first yml for the pull trigger"
-           run: echo " hey srihari u made it buddy"
+         - name: " my first yml for the pull trigger"
+          run: echo " hey srihari u made it buddy"
