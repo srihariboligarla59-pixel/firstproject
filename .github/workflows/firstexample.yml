@@ -1,7 +1,7 @@
 name: firstexample
 on : push
 jobs:
-  build_job:
+build_job:
      run-on : ubuntu-latest
      - name : "install the COWSAY"
       run : sudo apt install cowsay -y
@@ -9,11 +9,11 @@ jobs:
       run : cowsay -f srihari "hello srihari!!">>srihari.txt
      - name: sleep for 5 sec
        run : sleep 5
-  test_job: 
+test_job: 
      run-on : ubuntu-latest
      - name : test the srihari file
        run : grep -i hello srihari.txt
-  deploy_job:
+deploy_job:
      run-on : ubuntu-latest 
      - name : deploy the file 
        run: echo " deployed"  
