@@ -1,24 +1,28 @@
 name: firstexample
-on : push
+
+on: push
+
 jobs:
- build_job:
-  runs-on : ubuntu-latest
-   steps:
-     - name : "install the COWSAY"
-      run : sudo apt install cowsay -y
-     - name : print the cowsay
-      run : cowsay "hello srihari!!">>srihari.txt
-     - name: sleep for 5 sec
-      run : sleep 5
- test_job:
-  runs-on : ubuntu-latest
-   steps:
-    - name : test the srihari file
-     run : grep -i hello srihari.txt
- deploy_job:
-  runs-on : ubuntu-latest 
-   steps:
-    - name : deploy the file 
-     run: echo " deployed"  
-         
-        
+  build_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "install the COWSAY"
+        run: sudo apt install cowsay -y
+
+      - name: print the cowsay
+        run: cowsay "hello srihari!!" >> srihari.txt
+
+      - name: sleep for 5 sec
+        run: sleep 5
+
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test the srihari file
+        run: grep -i hello srihari.txt
+
+  deploy_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy the file
+        run: echo "deployed"
