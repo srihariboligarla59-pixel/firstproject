@@ -2,7 +2,13 @@ name: firstexample
 on : pull_request
 jobs:
     my-job:
-        runs-on: ubuntu-latest 
+        runs-on: ubuntu-latest
         steps:
-         - name: " my first yml for the pull trigger"
-          run: echo " hey srihari u made it buddy"
+         - name : checkout the actions
+           uses : action/checkout@v4
+        steps:
+         - name : " my first yml for the pull trigger"
+           run : echo " hey srihari u made it buddy"
+        steps:
+         - name : list the file
+           run : ls
