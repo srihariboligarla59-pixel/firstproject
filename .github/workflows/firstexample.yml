@@ -14,4 +14,6 @@ jobs:
            run : ls
          - name : read the files
            run: echo "there is no file only readme"
+         - name : read the file
+           run: cat README.md
         
