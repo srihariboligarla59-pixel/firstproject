@@ -4,5 +4,5 @@ jobs:
  push_on:
   runs-on: ubuntu:latest
   steps :
-   -name: my first workflow
-    run: echo " this is my first workflow"
+   - name: my first workflow
+     run: echo " this is my first workflow"
