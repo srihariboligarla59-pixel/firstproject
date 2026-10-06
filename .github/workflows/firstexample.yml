@@ -27,7 +27,7 @@ jobs:
         run: grep -i hello srihari.txt
       - name: download the srihari file
         uses : action/download-artifact@v3
-         with:
+        with:
           name : download the srihari file
 
   deploy_job:
@@ -36,7 +36,7 @@ jobs:
     steps:
       - name: download the srihari file
         uses : action/download-artifact@v3
-         with:
+        with:
           name : download the srihari file
       - name: deploy the file
         run: echo "deployed"
