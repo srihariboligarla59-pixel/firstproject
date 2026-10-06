@@ -23,12 +23,12 @@ jobs:
     needs : build_job
     runs-on: ubuntu-latest
     steps:
-      - name: test the srihari file
-        run: grep -i hello srihari.txt
       - name: download the srihari file
         uses : action/download-artifact@v4
         with:
           name : download the srihari file
+      - name: test the srihari file
+        run: grep -i hello srihari.txt
 
   deploy_job:
     needs: [test_job]
