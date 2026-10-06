@@ -15,7 +15,7 @@ jobs:
       - name: upload the srihari file 
         uses : actions/upload-artifact@v4
         with:
-          name : srihart file upload
+          name : srihari.txt
           path: srihari.txt
 
 
