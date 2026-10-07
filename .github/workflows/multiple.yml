@@ -1,0 +1,14 @@
+name : script for the multiple jobs 
+on: push
+jobs:
+    multiple:
+        runs-on : ubuntu-latest 
+        steps:
+            - name: defining the needs in the multiple jobs
+              run: echo " this is the needs implementataion"
+    second:
+        runs-on: ubuntu-latest
+        needs : multiple
+        steps:
+            - name: this is the second job
+              run : echo " you got it ahaa!"
