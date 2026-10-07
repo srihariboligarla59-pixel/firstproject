@@ -2,10 +2,11 @@ name : printing the greetings for me
 on: push
 jobs:
     greetings:
-        runs-on : ubuntu-latest
-        - name: pritig the greeting
+     runs-on : ubuntu-latest
+     steps: 
+         - name: pritig the greeting
           run: echo " hi srihari_boligarla"
-        - name : print date 
+         - name : print date 
           run: date
-        - name : list the files
+         - name : list the files
           run: ls -ltr
