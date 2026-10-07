@@ -4,9 +4,9 @@ jobs:
     greetings:
      runs-on : ubuntu-latest
      steps: 
-         - name: pritig the greeting
+        - name: pritig the greeting
           run: echo " hi srihari_boligarla"
-         - name : print date 
+        - name : print date 
           run: date
-         - name : list the files
+        - name : list the files
           run: ls -ltr
