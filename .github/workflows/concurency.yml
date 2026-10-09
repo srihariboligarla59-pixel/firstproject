@@ -1,12 +1,14 @@
 on :
     workflow dispatch 
 jobs:
-    runs-on: ubuntu-latest
-    steps:
-        flow:
+    flow:
+     runs-on: ubuntu-latest
+     steps:
          - name : print something
            run : echo " you have asked to print something right??"
 
-        start: 
+    start:
+        runs-on: ubuntu-latest
+        steps: 
          - name : print the files 
            run : ls -ltr
