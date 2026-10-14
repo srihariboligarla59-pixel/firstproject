@@ -1,0 +1,16 @@
+name: passing the variable and secrects 
+on:
+    workflow_dispatch
+env:
+    CONTAINER_REGISTRY : docker.io
+    image_name : github-action-nginx
+jobs:
+    docker:
+        runs-on : ubuntu-latest
+        steps:
+            - name : docker build 
+              run : echo docker build -t ${{env.CONTAINER_REGISTRY}}/${{var.docker_username}}/$image_name:latest
+            - name: docker login
+              run : echo docker login --username==${{var.docker_username}} --password==${{secrects.docker_password}}
+            - name : docker publish 
+              run : echo docker push $CONTAINER_REGISTRY/${{var.docker_username}}/image_name:latest 
