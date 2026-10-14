@@ -40,5 +40,6 @@ jobs:
         with:
           name : srihari.txt
       - name: deploy the file
-        run: echo "deployed"
-        sleep : 600s
+        run: |
+          echo "deployed"
+          sleep 600s
