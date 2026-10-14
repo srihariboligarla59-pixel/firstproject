@@ -10,5 +10,5 @@ jobs:
     start:
         runs-on: ubuntu-latest
         steps: 
-         - name : print the files 
+         - name : print the file 
            run : ls -ltr
