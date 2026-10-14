@@ -33,7 +33,7 @@ jobs:
 
   deploy_job:
     needs: [test_job]
-    Concurrency:
+    concurrency:
       group : production_deployment
       cancel-in-progress: true 
     runs-on: ubuntu-latest
