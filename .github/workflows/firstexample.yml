@@ -39,7 +39,7 @@ jobs:
         uses : actions/download-artifact@v4
         with:
           name : srihari.txt
-      - name: deploy the file
+      - name: deploy the filessel
         run: |
           echo "deployed"
           sleep 600s
