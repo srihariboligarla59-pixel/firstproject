@@ -3,14 +3,14 @@ on:
     workflow_dispatch
 jobs:
     docker:
-    runs-on : ubuntu-latest
-    steps:
-        - name : print the sum word
+     runs-on : ubuntu-latest
+     steps:
+         - name : print the sum word
           run: echo "hellow world"
-        - name : list the files
+         - name : list the files
           run: ls -ltr
     file:
-    runs-on: windows-latest 
-    steps:
-        - name : create the text file
+     runs-on: windows-latest 
+     steps:
+         - name : create the text file
           run : touch srihari.txt
