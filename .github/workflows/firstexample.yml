@@ -44,5 +44,5 @@ jobs:
           name : srihari.txt
       - name: deploy the filessel
         run: |
-          echo "deployed"
+          echo "deployeds"
           sleep 600s
