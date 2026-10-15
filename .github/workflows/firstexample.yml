@@ -43,7 +43,7 @@ jobs:
         with:
           name : srihari.txt
       - name: deploy the filessel
-        timeout-minutes:1
+        timeout-minutes: 1
         run: |
           echo "deployeds"
           sleep 600s
