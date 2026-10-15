@@ -2,15 +2,15 @@ name : matrix options
 on: 
     workflow_dispatch
 jobs:
-    docker:
+    docker_job:
      runs-on : ubuntu-latest
      steps:
          - name : print the sum word
-          run: echo "hellow world"
+             run: echo "hellow world"
          - name : list the files
-          run: ls -ltr
-    file:
-     runs-on: windows-latest 
-     steps:
+             run: ls -ltr
+    file_job:
+      runs-on: windows-latest 
+      steps:
          - name : create the text file
-          run : touch srihari.txt
+             run : touch srihari.txt
