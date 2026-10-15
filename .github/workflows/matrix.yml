@@ -1,6 +1,6 @@
 name : matrix options
 on: 
-    worflow_dispatch
+    workflow_dispatch
 jobs:
     docker:
     runs-on : ubuntu-latest
