@@ -6,7 +6,7 @@ jobs:
      runs-on : ubuntu-latest
      steps:
          - name : print the sum word
-             run: echo "hellow world"
+             run: echo " hello world "
          - name : list the files
              run: ls -ltr
     file_job:
