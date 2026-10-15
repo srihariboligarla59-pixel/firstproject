@@ -38,7 +38,7 @@ jobs:
       cancel-in-progress: true 
     runs-on: ubuntu-latest
     steps:
-      - name: download the srihari file
+      - name: download the srihari file and message 
         uses : actions/download-artifact@v4
         with:
           name : srihari.txt
