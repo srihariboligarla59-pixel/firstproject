@@ -4,8 +4,8 @@ on:
 jobs:
     docker_job:
         strategy:
-            matrix:
-                os : [ubuntu-latest , windows-latest]
+         matrix:
+                os: [ubuntu-latest , windows-latest]
                 images: [hello-world ,alphine]
      runs-on : ${{matrix.os}}
      steps:
