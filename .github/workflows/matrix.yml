@@ -1,16 +1,21 @@
+
 name: matrix options
-on: 
-    workflow_dispatch:
+
+on:
+  workflow_dispatch:
+
 jobs:
-    docker_job:
-        strategy:
-         matrix:
-                os: [ubuntu-latest , windows-latest]
-                images: [hello-world ,alphine]
-     runs-on : ${{matrix.os}}
-     steps:
-            - name : print the sum word
-              run: echo " hello world "
-            - name : list the files
-              run: ls -ltr
-    
+  docker_job:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        images: [hello-world, alpine]
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: print the sum word
+        run: echo "hello world"
+
+      - name: list the files
+        run: ls -ltr
