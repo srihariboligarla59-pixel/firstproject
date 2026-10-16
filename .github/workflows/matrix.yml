@@ -11,6 +11,6 @@ jobs:
               run: ls -ltr
     file_job:
       runs-on: windows-latest 
-      steps:
-            - name : create the text file
-               run: echo " this is the second files "
+      steps: 
+         - name : create the text file
+           run: echo " this is the second files "
