@@ -8,9 +8,9 @@ jobs:
             - name : print the sum word
               run: echo " hello world "
             - name : list the files
-             run: ls -ltr
+              run: ls -ltr
     file_job:
       runs-on: windows-latest 
       steps:
-         - name : create the text file
-             run: echo " this is the second files "
+            - name : create the text file
+               run: echo " this is the second files "
