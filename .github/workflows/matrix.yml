@@ -7,14 +7,14 @@ on:
 jobs:
   docker_job:
     strategy:
-      max-parallel:2
-      matrix:
-        os: [ubuntu-latest, windows-latest]
-        images: [hello-world, alpine]
-        exclude:
+       max-parallel:2
+       matrix:
+         os: [ubuntu-latest, windows-latest]
+         images: [hello-world, alpine]
+         exclude:
             - images:[alphine]
               os: windows-latest
-        include:
+         include:
             - images:[awd 64/alphine]
               os: ubuntu-latest
 
