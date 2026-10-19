@@ -1,8 +1,8 @@
 name: firstexample
 
 on: 
-  workflow_dispatch
-  push
+  workflow_dispatch:
+  push:
 
 jobs:
   build_job: 
@@ -48,4 +48,4 @@ jobs:
         timeout-minutes: 1
         run: |
           echo "deployeds"
-          sleep 600s
+          sleep 60s
