@@ -2,6 +2,7 @@ name: firstexample
 
 on: 
   workflow_dispatch
+  push
 
 jobs:
   build_job: 
@@ -32,6 +33,7 @@ jobs:
         run: grep -i hello srihari.txt
 
   deploy_job:
+    if : github.ref == 'refs/head/main'
     needs: [test_job]
     concurrency:
       group : production_deployment
